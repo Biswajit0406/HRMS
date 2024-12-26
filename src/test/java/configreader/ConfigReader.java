@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ConfigReader {
-	private static Properties prop;
+	public static Properties prop;
 	static {
 		try {
 			FileInputStream fr = new FileInputStream("C:\\Users\\KIIT\\eclipse-workspace\\com.or.HRMS\\src\\test\\java\\configreader.properties");

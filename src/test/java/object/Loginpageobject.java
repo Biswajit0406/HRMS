@@ -1,5 +1,6 @@
 package object;
 
+import java.time.Duration;
 import java.util.Scanner;
 
 import org.openqa.selenium.Alert;
@@ -8,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.Base;
 import configreader.ConfigReader;
@@ -85,28 +88,25 @@ public class Loginpageobject extends Base{
 	        return Utility.isElementVisible(logo);
 	    }
 
-	    public void enterUsername() {
-//	        usernameField.clear();
-//	    	usernameField.sendKeys(Keys.CONTROL + "a");
-//	    	usernameField.sendKeys(Keys.BACK_SPACE);
-	    	String username = ConfigReader.getProperty("username");
-	    	System.out.println("Username: " + username);
+	    public void enterUsername(String username) {
+	        usernameField.clear();
 	        usernameField.sendKeys(username);
 	    }
 
-	    public void enterPassword() {
-//	        passwordField.clear();	      
-	    	String password = ConfigReader.getProperty("password");
-	        System.out.println("password: " + password);
+	    public void enterPassword(String password) {
+	        passwordField.clear();
 	        passwordField.sendKeys(password);
 	    }
-
-	    public  Homepageobject clickloginButton() {
-	    	
-	        loginButton.click();
-	        return new Homepageobject();
-	    }
-
+	    public  Homepageobject clickloginButton(String username,String password) {
+	    	    enterUsername(username);
+	    	    enterPassword(password);
+	    	    
+	    	    loginButton.click();
+	    	    WebDriverWait wait = new WebDriverWait(dr, Duration.ofSeconds(10));
+	   		    wait.until(ExpectedConditions.titleIs("Home"));
+	           return new Homepageobject(dr);
+	      }
+	  
 public void clicksignup(String name, String mail) {
     
     signup.click();
@@ -136,6 +136,7 @@ public void clicksignup(String name, String mail) {
         signupmail.clear();
         signupname.sendKeys(name); 
         signupmail.sendKeys(mail); 
+        Utility.waitForElement(dr, alreadyregister, 10);
         //alreadyregister.click();
         //signUpDialogBox.click();
 //       Alert alert=dr.switchTo().alert();
@@ -174,5 +175,6 @@ public void clickForgotPassword(String forgotMail) {
         throw new IllegalStateException("Forgot email input field is not visible");
     }
 }
-        
+
+     
 }
