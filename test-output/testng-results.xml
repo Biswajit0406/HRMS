@@ -1,49 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-24T15:37:22 IST" name="Default suite" finished-at="2024-12-24T15:37:48 IST" duration-ms="26177">
+  <suite started-at="2025-01-06T17:21:36 IST" name="Default suite" finished-at="2025-01-06T17:21:53 IST" duration-ms="17073">
     <groups>
     </groups>
-    <test started-at="2024-12-24T15:37:22 IST" name="Default test" finished-at="2024-12-24T15:37:48 IST" duration-ms="26177">
-      <class name="Test.HomepageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:22 IST" name="setUp" finished-at="2024-12-24T15:37:29 IST" duration-ms="7178" status="PASS">
+    <test started-at="2025-01-06T17:21:36 IST" name="Default test" finished-at="2025-01-06T17:21:53 IST" duration-ms="17073">
+      <class name="Test.EmployeeMasterTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.EmployeeMasterTest@4009e306]" started-at="2025-01-06T17:21:37 IST" name="setup" finished-at="2025-01-06T17:21:43 IST" duration-ms="6673" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="HomepTitle()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:29 IST" name="HomepTitle" finished-at="2024-12-24T15:37:29 IST" duration-ms="11" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="campus_location_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Test.EmployeeMasterTest@4009e306]" started-at="2025-01-06T17:21:43 IST" name="campus_location_test" data-provider="campus_location" finished-at="2025-01-06T17:21:45 IST" duration-ms="1753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[balasore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fm golei]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[756166]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[fm college]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dinesh@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HomepTitle -->
-        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:29 IST" name="tearDownBrowser" finished-at="2024-12-24T15:37:29 IST" duration-ms="192" status="PASS">
+        </test-method> <!-- campus_location_test -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.EmployeeMasterTest@4009e306]" started-at="2025-01-06T17:21:45 IST" name="setup" finished-at="2025-01-06T17:21:51 IST" duration-ms="5882" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:29 IST" name="setUp" finished-at="2024-12-24T15:37:38 IST" duration-ms="8411" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="campus_location_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Test.EmployeeMasterTest@4009e306]" started-at="2025-01-06T17:21:51 IST" name="campus_location_test" data-provider="campus_location" finished-at="2025-01-06T17:21:53 IST" duration-ms="2120" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bhadrak]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[college chak]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[750121]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[bdk college]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[dinesh@gmail.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="HomeplogoTest()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:38 IST" name="HomeplogoTest" finished-at="2024-12-24T15:37:38 IST" duration-ms="28" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomeplogoTest -->
-        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:38 IST" name="tearDownBrowser" finished-at="2024-12-24T15:37:38 IST" duration-ms="192" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:38 IST" name="setUp" finished-at="2024-12-24T15:37:48 IST" duration-ms="9886" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="cliconHrmsTest()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:48 IST" name="cliconHrmsTest" finished-at="2024-12-24T15:37:48 IST" duration-ms="71" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cliconHrmsTest -->
-        <test-method is-config="true" signature="tearDownBrowser()[pri:0, instance:Test.HomepageTest@7817fd62]" started-at="2024-12-24T15:37:48 IST" name="tearDownBrowser" finished-at="2024-12-24T15:37:48 IST" duration-ms="160" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownBrowser -->
-      </class> <!-- Test.HomepageTest -->
+        </test-method> <!-- campus_location_test -->
+      </class> <!-- Test.EmployeeMasterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

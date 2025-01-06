@@ -16,9 +16,12 @@ import org.testng.annotations.Test;
 import base.Base;
 import configreader.ConfigReader;
 import object.Loginpageobject;
+import utility.Logerutility;
 import utility.Utility;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class LoginpageTest extends Base {
+	public static final Logger loger=Logerutility.getLogger(LoginpageTest.class);
 	Loginpageobject login;
 	String username="";
 	String password="";
@@ -37,6 +40,7 @@ public class LoginpageTest extends Base {
     @Test
 	public void logoTest() {
 		Assert.assertTrue(login.isLogoVisible(), "logo not visible");
+		loger.info("logotest is successful");
 		//login.tearDownBrowser();
     }
 //    @Test()

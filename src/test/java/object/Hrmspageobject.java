@@ -65,10 +65,11 @@ public class Hrmspageobject extends Base{
         logOut.click();
     }
     
-    public EmployeeMaster clickonMasterEmplyee() {
+    public EmployeeMaster clickonMasterEmplyee(){
 //    	WebDriverWait wait=new WebDriverWait(dr,Duration.ofSeconds(10));
 //        wait.until(ExpectedConditions.elementToBeClickable(emptype));
     	 emptype.click();
+    	// Thread.sleep(5);
     	 return new EmployeeMaster(dr) ;
     }
 }

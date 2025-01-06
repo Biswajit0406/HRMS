@@ -114,6 +114,7 @@ public class HrmsTest extends Base {
 //    
    @Test
 	public void clickonempmaster() {
+	   
 		emp=hrms.clickonMasterEmplyee();
 		Assert.assertTrue(true, "not clicked");
 	}
