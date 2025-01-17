@@ -42,7 +42,7 @@ public class Base {
 	    dr.get(ConfigReader.getProperty("url"));
 	}
 	
-	@AfterMethod(enabled =false)
+	@AfterMethod(enabled =true)
 	public void tearDownBrowser() {
 		if (dr != null) {
 			dr.quit();

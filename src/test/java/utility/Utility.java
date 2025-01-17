@@ -31,6 +31,9 @@ public class Utility {
 
 	        for (int i = 1;i<rowCount; i++) {
 	            Row row = sheet.getRow(i);
+	            if (row == null) {
+	                continue; 
+	            }
 	            for (int j = 0; j < colCount; j++) {
 	                data[i - 1][j] = formatter.formatCellValue(row.getCell(j));
 	            }

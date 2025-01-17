@@ -6,7 +6,7 @@
       <class name="Test.EmployeeMasterTest">
         <methods>
           <include name="tearDownBrowser"/>
-          <include name="campus_location_test" invocation-numbers="0"/>
+          <include name="campus_location_test" invocation-numbers="1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Test.EmployeeMasterTest -->
