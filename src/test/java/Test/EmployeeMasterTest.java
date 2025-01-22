@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import base.Base;
 import configreader.ConfigReader;
@@ -42,7 +43,7 @@ public class EmployeeMasterTest extends Base {
 	}
 
 	@Test
-
+   // @Listeners(listeners.ExtentReportListener.class) //for run single test Listener anotation+package name+class name
 	public void EmployeeTest() throws Exception {
 		emp = hrms.clickonMasterEmplyee();
 		emp.addemp();

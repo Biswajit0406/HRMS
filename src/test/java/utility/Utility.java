@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.commons.compress.harmony.unpack200.bytecode.forms.NarrowClassRefForm;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -13,6 +12,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import java.io.File;
 
 public class Utility {
 
@@ -60,5 +63,16 @@ public class Utility {
 			return false;
 		}
 	}
+	  public static String captureScreenshot(WebDriver driver, String screenshotName) {
+	        String destinationPath = System.getProperty("user.dir") + "reports/HRMSscreenshots/" + screenshotName + ".png";
+	        try {
+	            File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	            FileUtils.copyFile(source, new File(destinationPath));
+	        } catch (IOException e) {
+	            System.out.println("Error capturing screenshot: " + e.getMessage());
+	        }
+	        return destinationPath;
+	    }
+	}
 	
-}
+
