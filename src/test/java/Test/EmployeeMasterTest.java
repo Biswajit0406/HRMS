@@ -2,6 +2,8 @@ package Test;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,7 +25,7 @@ public class EmployeeMasterTest extends Base {
 	Homepageobject home;
 	Hrmspageobject hrms;
 	EmployeeMaster emp;
-
+	private static final Logger logger = LogManager.getLogger(EmployeeMasterTest.class);
 	public EmployeeMasterTest() {
 		super();
 	}
@@ -48,6 +50,7 @@ public class EmployeeMasterTest extends Base {
 		emp = hrms.clickonMasterEmplyee();
 		emp.addemp();
 		dr.close();
+		logger.info("login test completed successfully");
 	}
 
 	@DataProvider(name = "campus_location")

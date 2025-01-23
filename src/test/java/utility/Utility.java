@@ -63,16 +63,38 @@ public class Utility {
 			return false;
 		}
 	}
-	  public static String captureScreenshot(WebDriver driver, String screenshotName) {
-	        String destinationPath = System.getProperty("user.dir") + "reports/HRMSscreenshots/" + screenshotName + ".png";
-	        try {
-	            File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	            FileUtils.copyFile(source, new File(destinationPath));
-	        } catch (IOException e) {
-	            System.out.println("Error capturing screenshot: " + e.getMessage());
+//	  public static String captureScreenshot(WebDriver driver, String screenshotName) {
+//	        String destinationPath = System.getProperty("user.dir") + "ScreenShot/HRMSscreenshots/" + screenshotName + ".png";
+//	        try {
+//	            File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//	            FileUtils.copyFile(source, new File(destinationPath));
+//	        } catch (IOException e) {
+//	            System.out.println("Error capturing screenshot: " + e.getMessage());
+//	        }
+//	        return destinationPath;
+//	    }
+//	}
+	public static String captureScreenshot(WebDriver dr, String screenshotName) {
+	    // Define the directory for saving screenshots
+	    String screenshotDir = System.getProperty("user.dir") + "/ScreenShot/HRMSscreenshots/";
+	    String destinationPath = screenshotDir + screenshotName + ".png";
+
+	    try {
+	        // Create the directory if it doesn't exist
+	        File dir = new File(screenshotDir);
+	        if (!dir.exists()) {
+	            dir.mkdirs(); // Create all necessary directories
 	        }
-	        return destinationPath;
+
+	        // Capture the screenshot
+	        File source = ((TakesScreenshot) dr).getScreenshotAs(OutputType.FILE);
+
+	        // Save the screenshot in the desired location
+	        FileUtils.copyFile(source, new File(destinationPath));
+	    } catch (IOException e) {
+	        System.out.println("Error capturing screenshot: " + e.getMessage());
 	    }
+	    return destinationPath;
 	}
-	
+}
 

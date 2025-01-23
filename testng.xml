@@ -9,10 +9,10 @@
 
 	<test thread-count="5" name="Test">
        <classes>
-            <class name="Test.HomepageTest" >
+            <class name="Test.EmployeeMasterTest" >
             <!-- Add more test classes here if needed -->
              <methods>
-                    <include name="HomeplogoTest" />
+                    <include name="EmployeeTest" />
              </methods>
             </class>
         </classes>

@@ -6,18 +6,10 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Test.LoginpageTest">
-        <methods>
-          <include name="loginTest" invocation-numbers="1"/>
-          <include name="tearDownBrowser"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Test.LoginpageTest -->
       <class name="Test.EmployeeMasterTest">
         <methods>
           <include name="EmployeeTest"/>
           <include name="tearDownBrowser"/>
-          <include name="campus_location_test" invocation-numbers="1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Test.EmployeeMasterTest -->
