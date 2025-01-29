@@ -109,7 +109,7 @@ public class EmployeeMaster extends Base{
 		addemployee.click();
 		editfullformbutton.click();
 		System.out.println("input the employeement type");
-		String emp=s.nextLine();
+		String emp="singapore";
 		Thread.sleep(5000);
 		employement_type.sendKeys(emp);
 		dr.switchTo().activeElement().sendKeys(Keys.ESCAPE);
